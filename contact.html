@@ -38,9 +38,13 @@
       var valid;	
       valid = validateContact();
       if(valid) {
+        var userName = $("#userName").val();
+        var userEmail = $("#userEmail").val();  
+        var subject = $("#subject").val();
+        var content = $("#subject").val();
         jQuery.ajax({
         url: "contact_mail.php",
-        data:'userName='+$("#userName").val()+'&userEmail='+$("#userEmail").val()+'&subject='+$("#subject").val()+'&content='+$("#content").val(),
+        data:'userName='+userName+'&userEmail='+userEmail+'&subject='+subject+'&content='+content,
         type: "POST",
         success:function(data){
         $("#mail-status").html(data);
