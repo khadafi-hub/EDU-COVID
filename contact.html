@@ -41,16 +41,18 @@
         var userName = $("#userName").val();
         var userEmail = $("#userEmail").val();  
         var subject = $("#subject").val();
-        var content = $("#subject").val();
-        jQuery.ajax({
-        url: "contact_mail.php",
-        data:'userName='+userName+'&userEmail='+userEmail+'&subject='+subject+'&content='+content,
+        var content = $("#content").val();
+        
+        $.ajax({
         type: "POST",
+        url: "contact_mail.php",
+        data: "userName=" + userName + "&userEmail=" + userEmail + "&subject=" + subject + "&content=" + content,
         success:function(data){
         $("#mail-status").html(data);
         },
         error:function (){}
         });
+        
       }
     }
 
