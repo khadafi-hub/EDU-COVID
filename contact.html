@@ -57,12 +57,12 @@
     
     if(!$("#name").val()) {
       $("#userName-info").html("(required)");
-      $("#userName").css('background-color','#FFFFDF');
+      $("#email").css('background-color','#FFFFDF');
       valid = false;
     }
     if(!$("#email").val()) {
       $("#userEmail-info").html("(required)");
-      $("#userEmail").css('background-color','#FFFFDF');
+      $("#email").css('background-color','#FFFFDF');
       valid = false;
     }
     if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
@@ -77,7 +77,7 @@
     }
     if(!$("#message").val()) {
       $("#message-info").html("(required)");
-      $("#content").css('background-color','#FFFFDF');
+      $("#message").css('background-color','#FFFFDF');
       valid = false;
     }
     
